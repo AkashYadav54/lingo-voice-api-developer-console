@@ -1,1 +1,82 @@
-<p>apikeys works!</p>
+<div class="project-container">
+  <h1>API Keys</h1>
+  <p>Project ID: f017324e-5a35-4e7a-bc29-5e44955d49b1</p>
+  <div class="card-container">
+    <div class="card">
+      <h3>Create and manage API Keys</h3>
+      <p>Remember to save your API Keys in a safe spot. For security purposes, secrets are not recoverable.</p>
+      <button class="create-api-button">Create API Key</button>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  USING YOUR API KEY
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <p>API Keys act like a password for API Authentication. Insert the secret from your API Key into your request like so:</p>
+                  <code>Authorization: Token &lt;YOUR_SECRET&gt;</code>
+                  <p>Your secret should look like a 40 character alphanumeric.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  BEST PRACTICES
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <p>Here you can add best practices for managing API keys.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  FORGOT YOUR SECRET?
+              </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <p>If you forgot your API secret, create a new API key to replace it.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>   
+<div class="api-keys-container">
+  <h2>API Keys</h2>
+  <div class="filter-section">
+    <input
+      type="text"
+      placeholder="Filter by Comment, Creator, Tag, Identifier, or Scope"
+      class="filter-input"
+    />
+    <button class="role-button">Role</button>
+  </div>
+  <table class="api-keys-table">
+    <thead>
+      <tr>
+        <th>Comment</th>
+        <th>Secret</th>
+        <th>Role</th>
+        <th>Created by</th>
+        <th>Created</th>
+        <th>Expires</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="6" class="no-results">
+          No results... While you're here, remember: Friends don't let friends commit API Keys.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

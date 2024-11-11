@@ -1,0 +1,56 @@
+.container {
+  max-width: 700px;
+}
+
+.api-card {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-muted {
+  color: #a0a0a0 !important;
+}
+
+.btn-create {
+  background-color: #1db954;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  &:hover {
+      background-color: #17a34a;
+  }
+}
+
+.accordion-button {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+
+  &.collapsed {
+      background-color: #2c2c2c;
+  }
+
+  &:not(.collapsed) {
+      color: #f5f5f5;
+      background-color: #3a3a3a;
+  }
+}
+
+.accordion-body {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+code {
+  background-color: #3a3a3a;
+  color: #1db954;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
