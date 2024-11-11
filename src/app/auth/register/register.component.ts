@@ -8,10 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-
   constructor(
     private readonly _router: Router,
     private readonly _route: ActivatedRoute,

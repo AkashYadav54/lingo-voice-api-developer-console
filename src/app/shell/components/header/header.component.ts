@@ -24,5 +24,4 @@ export class HeaderComponent {
       console.log('Navigated to Logout');
     });
   }
-
 }

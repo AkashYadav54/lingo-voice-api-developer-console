@@ -73,4 +73,7 @@ export class SidebarComponent implements OnInit {
   activateSidebarSubItem(index: number, subItem: NavMenuItem): void {
     this.shellService.activateNavSubItem(index, subItem, this.sidebarItems);
   }
+  dashboard(): void {
+    this._router.navigate(['/dashboard']);
+  }
 }
