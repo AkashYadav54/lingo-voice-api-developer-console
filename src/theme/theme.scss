@@ -100,14 +100,12 @@
 //   cursor: default;
 // }
 
-
-
 .authentication-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   min-height: 100vh;
   width: 100%;
 }
@@ -120,17 +118,17 @@
 }
 .authentication-wrapper.authentication-basic {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   overflow: hidden;
 }
 .authentication-wrapper.authentication-cover {
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .authentication-wrapper.authentication-cover .authentication-inner {
   height: 100vh;

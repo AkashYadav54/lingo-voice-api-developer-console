@@ -161,10 +161,6 @@ _You can see all change logs [Here](/CHANGELOG.md)._
 ---
 
 Author:
-
-[Arslan Ameer](www.arslanameer.com) | [GitHub](https://github.com/ArslanAmeer)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/arslanameer)
-=======
+Akash Yadav
 # lingo-voice-api-developer-console
 >>>>>>> 062701e5d78c8a0ced657d2547c6a01bb2169b41
