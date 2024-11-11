@@ -18,7 +18,7 @@ import { SocketIoService } from '@core/socket-io';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'angular-boilerplate';
+  title = 'Lingo Voice API Developer Console';
 
   constructor(
     private readonly _router: Router,

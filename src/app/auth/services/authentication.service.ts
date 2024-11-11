@@ -43,6 +43,23 @@ export class AuthenticationService {
     return of(credentials);
   }
 
+  register(context: LoginContext): Observable<Credentials> {
+    const credentials: Credentials = new Credentials({
+      username: 'johndoe',
+      id: '',
+      token: '123456',
+      refreshToken: '123456',
+      expiresIn: 3600,
+      roles: ['admin'],
+      email: 'john@email.com',
+      firstName: 'John',
+      lastName: 'Doe',
+    });
+    this._credentialsService.setCredentials(credentials, context.remember);
+
+    return of(credentials);
+  }
+
   /**
    * Logs out the user and clear credentials.
    * @return True if the user was logged out successfully.

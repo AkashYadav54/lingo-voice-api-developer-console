@@ -1,0 +1,105 @@
+<div class="authentication-wrapper authentication-cover">
+  <!-- Logo -->
+  <a href="index.html" class="app-brand auth-cover-brand gap-2">
+    <span class="app-brand-logo demo">
+      <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50.5" cy="50.5" r="50.5" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1257 35.0832V63.8321H63.7889V35.0832H35.1257ZM33.5205 20.7944C26.4919 20.7944 20.7941 26.4752 20.7941 33.4828V65.4325C20.7941 72.4401 26.4919 78.1209 33.5205 78.1209H65.394C72.4227 78.1209 78.1205 72.4401 78.1205 65.4325V33.4828C78.1205 26.4752 72.4227 20.7944 65.394 20.7944H33.5205Z" fill="url(#paint0_linear_5279_14702)"/>
+        <path d="M35.0381 20.801L35.3237 63.5836H78.1167C78.2754 74.2315 73.4993 77.7827 65.5804 78.0071H38.1621C26.0978 78.8982 20.2413 74.6188 20.8351 62.9846L20.8637 35.1474C20.6808 26.1381 25.1467 20.5766 35.0381 20.801Z" fill="url(#paint1_linear_5279_14702)"/>
+        <defs>
+        <linearGradient id="paint0_linear_5279_14702" x1="71.6426" y1="22.6002" x2="26.8707" y2="78.1209" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#AD00FF"/>
+        <stop offset="1" stop-color="#07014B"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_5279_14702" x1="41.4241" y1="64.8385" x2="41.6807" y2="89.9573" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#171717"/>
+        <stop offset="1"/>
+        </linearGradient>
+        </defs>
+      </svg>
+
+    </span>
+    <span class="app-brand-text demo text-heading fw-bold">Lingo Voice API Developer Console</span>
+  </a>
+  <!-- /Logo -->
+  <div class="authentication-inner row m-0">
+
+    <!-- /Left Text -->
+    <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center p-5">
+      <div class="w-100 d-flex justify-content-center">
+        <img src="assets/img/illustrations/girl-with-laptop-light.png" class="img-fluid scaleX-n1-rtl" alt="Login image" width="700" data-app-dark-img="illustrations/girl-with-laptop-dark.png" data-app-light-img="illustrations/girl-with-laptop-light.png">
+
+      </div>
+    </div>
+    <!-- /Left Text -->
+
+    <!-- Register -->
+    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-12 p-6">
+      <div class="w-px-400 mx-auto mt-12 pt-5">
+        <h4 class="mb-1">Adventure starts here 🚀</h4>
+        <p class="mb-6">Make your app management easy and fun!</p>
+
+        <form id="formAuthentication" class="mb-6 fv-plugins-bootstrap5 fv-plugins-framework" action="index.html" method="GET" novalidate="novalidate">
+          <div class="mb-6 fv-plugins-icon-container">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus="">
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+          <div class="mb-6 fv-plugins-icon-container">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email">
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+          <div class="mb-6 form-password-toggle fv-plugins-icon-container">
+            <label class="form-label" for="password">Password</label>
+            <div class="input-group input-group-merge has-validation">
+              <input type="password" id="password" class="form-control" name="password" placeholder="············" aria-describedby="password">
+              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+            </div><div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+          </div>
+
+          <div class="mb-6 mt-8 fv-plugins-icon-container">
+            <div class="form-check mb-8 ms-2">
+              <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms">
+              <label class="form-check-label" for="terms-conditions">
+                I agree to
+                <a href="javascript:void(0);">privacy policy &amp; terms</a>
+              </label>
+            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+          </div>
+          <button class="btn btn-primary d-grid w-100">
+            Sign up
+          </button>
+        <input type="hidden"></form>
+
+        <p class="text-center">
+          <span>Already have an account?</span>
+          <a routerLink="/login">
+            <span>Sign in instead</span>
+          </a>
+        </p>
+
+        <div class="divider my-6">
+          <div class="divider-text">or</div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-facebook me-1_5">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+
+          <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-twitter me-1_5">
+            <i class="tf-icons bx bxl-twitter"></i>
+          </a>
+
+          <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-github me-1_5">
+            <i class="bx bxl-github"></i>
+          </a>
+
+          <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-google-plus">
+            <i class="tf-icons bx bxl-google"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- /Register -->
+  </div>
+</div>

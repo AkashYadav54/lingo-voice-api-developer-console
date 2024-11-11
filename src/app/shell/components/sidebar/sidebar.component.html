@@ -1,72 +1,65 @@
-<nav [class.pb]="navExpanded" [class.squeeze]="!navExpanded">
-  <span (click)="toggleSidebar(!navExpanded)" [ngClass]="{ open: navExpanded }" class="toggle-icon">
-    <!-- TODO: You can put any icon here, below span is just temporary for demo purpose  -->
-    <span style="color: var(--gray-400)"><</span>
-  </span>
+<div class="app-brand demo">
+  <a class="app-brand-link">
+    <span class="app-brand-logo demo">
+      <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50.5" cy="50.5" r="50.5" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1257 35.0832V63.8321H63.7889V35.0832H35.1257ZM33.5205 20.7944C26.4919 20.7944 20.7941 26.4752 20.7941 33.4828V65.4325C20.7941 72.4401 26.4919 78.1209 33.5205 78.1209H65.394C72.4227 78.1209 78.1205 72.4401 78.1205 65.4325V33.4828C78.1205 26.4752 72.4227 20.7944 65.394 20.7944H33.5205Z" fill="url(#paint0_linear_5279_14702)"/>
+        <path d="M35.0381 20.801L35.3237 63.5836H78.1167C78.2754 74.2315 73.4993 77.7827 65.5804 78.0071H38.1621C26.0978 78.8982 20.2413 74.6188 20.8351 62.9846L20.8637 35.1474C20.6808 26.1381 25.1467 20.5766 35.0381 20.801Z" fill="url(#paint1_linear_5279_14702)"/>
+        <defs>
+        <linearGradient id="paint0_linear_5279_14702" x1="71.6426" y1="22.6002" x2="26.8707" y2="78.1209" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#AD00FF"/>
+        <stop offset="1" stop-color="#07014B"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_5279_14702" x1="41.4241" y1="64.8385" x2="41.6807" y2="89.9573" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#171717"/>
+        <stop offset="1"/>
+        </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </a>
 
-  <div class="logo-container" routerLink="/">
-    <img alt="Logo" class="logo" src="images/placeholder.png" />
-    <h4>Brand Title</h4>
-  </div>
+  <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+    <i class="bx bx-chevron-left bx-sm d-flex align-items-center justify-content-center"></i>
+  </a>
+</div>
 
-  <div class="navbar-menu-items" dir="auto">
-    <ng-container *ngFor="let item of sidebarItems; let i = index">
-      <ng-container *ngIf="shellService.allowedAccess(item)">
-        <div class="menu">
-          <ng-container *ngIf="!item.divider; else divider">
-            <a (click)="activateSidebarItem(i)" [class.active]="item.active" [ngClass]="{ disabled: item.disabled }" class="menu-item" id="menu-item-{{ i }}">
-              <div class="item">
-                <ng-container *ngIf="item.icon">
-                  <!-- TODO This below i tag is temporary for demo purposes replace with proper icon passed in menu item -->
-                  @if (item.active) {
-                    <i style="color: var(--gray-400)">^</i>
-                  } @else {
-                    <i style="color: var(--sidebar-icon-color)">^</i>
-                  }
-                </ng-container>
-                <span>{{ item.title | translate }}</span>
-              </div>
-              <ng-container *ngIf="item.subItems && item.subItems.length">
-                <span [ngClass]="{ open: sidebarExtendedItem === i }" class="submenu-icon">
-                  <!-- TODO This below i tag is temporary for demo purposes, use any up down arrow icon -->
-                  @if (item.subItems && item.subItems.length && item.active) {
-                    <!-- Active Icon -->
-                    <i style="color: var(--gray-400)">^</i>
-                  } @else if (item.subItems && item.subItems.length && !item.active) {
-                    <!-- Inactive Icon -->
-                    <i style="color: var(--sidebar-icon-color)">^</i>
-                  }
-                </span>
-              </ng-container>
-            </a>
-            <ng-container *ngIf="item.subItems && item.subItems.length">
-              <ul [style.display]="sidebarExtendedItem === i ? 'block' : 'none'" class="sub-menu-items">
-                <ng-container *ngFor="let subItem of item.subItems">
-                  <ng-container *ngIf="shellService.allowedAccess(subItem)">
-                    <li [class.disabled]="subItem.disabled">
-                      <a (click)="activateSidebarSubItem(i, subItem)" [ngClass]="{ disabled: subItem.disabled }" [routerLink]="subItem.href || undefined" routerLinkActive="active">
-                        <!-- TODO This below i tag is temporary for demo purposes replace with proper icon passed in submenu item -->
-                        @if (item.subItems && item.subItems.length && item.active) {
-                          <!-- Active Icon -->
-                          <i style="color: var(--gray-400)">^</i>
-                        } @else if (item.subItems && item.subItems.length && !item.active) {
-                          <!-- Inactive Icon -->
-                          <i style="color: var(--sidebar-icon-color)">^</i>
-                        }
-                        <span>{{ subItem.title | translate }}</span>
-                      </a>
-                    </li>
-                  </ng-container>
-                </ng-container>
-              </ul>
-            </ng-container>
-          </ng-container>
-        </div>
-      </ng-container>
-    </ng-container>
-  </div>
-</nav>
+<div class="menu-inner-shadow"></div>
 
-<ng-template #divider>
-  <span class="divider"></span>
-</ng-template>
+<ul class="menu-inner py-1">
+
+  <li class="menu-item active">
+    <a href="javascript:void(0);" class="menu-link">
+      <i class="menu-icon tf-icons bx bx-home-smile"></i>
+      <div class="text-truncate" data-i18n="Dashboard">Dashboard</div>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="javascript:void(0);" class="menu-link">
+      <i class="menu-icon tf-icons bx bx-key"></i>
+      <div class="text-truncate" data-i18n="API Keys">API Keys</div>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="javascript:void(0);" class="menu-link">
+      <i class="menu-icon tf-icons bx bx-objects-vertical-bottom"></i>
+      <div class="text-truncate" data-i18n="Dashboard">Usage</div>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="javascript:void(0);" class="menu-link">
+      <i class="menu-icon tf-icons bx bx-right-arrow"></i>
+      <div class="text-truncate" data-i18n="Dashboard">Playground</div>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="javascript:void(0);" class="menu-link">
+      <i class="menu-icon tf-icons bx bx-cog"></i>
+      <div class="text-truncate" data-i18n="Dashboard">Project Settings</div>
+    </a>
+  </li>
+</ul>
