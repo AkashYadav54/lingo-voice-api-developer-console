@@ -83,6 +83,6 @@ export class SidebarComponent implements OnInit {
     this._router.navigate(['/usage']);
   }
   Playground(): void {
-    this._router.navigate(['/usage']);
+    this._router.navigate(['/playground']);
   }
 }
