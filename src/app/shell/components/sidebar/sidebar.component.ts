@@ -76,4 +76,13 @@ export class SidebarComponent implements OnInit {
   dashboard(): void {
     this._router.navigate(['/dashboard']);
   }
+  APIKeys(): void {
+    this._router.navigate(['/apikey']);
+  }
+  Usage(): void {
+    this._router.navigate(['/usage']);
+  }
+  Playground(): void {
+    this._router.navigate(['/usage']);
+  }
 }
