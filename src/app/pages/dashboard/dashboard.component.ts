@@ -8,4 +8,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+   userEmail = 'sandlogic@gmail.com';
+}

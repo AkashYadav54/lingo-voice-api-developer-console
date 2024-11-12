@@ -22,8 +22,8 @@
   margin-top: 20px;
 }
 
-.card {
-  background-color: #2a2a2a;
+.cardapi {
+  // background-color: #2a2a2a;
   padding: 20px;
   border-radius: 8px;
   width: 45%;
@@ -54,7 +54,7 @@
 }
 
 .billing-button {
-  background-color: #333;
+  // background-color: #333;
   color: #fff;
   border: 1px solid #444;
   padding: 8px 12px;
@@ -90,7 +90,6 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   width: 100%;
-  max-width: 800px;
   margin: auto;
 }
 
@@ -121,7 +120,7 @@
 }
 
 .filter-button:hover {
-  background-color: #444;
+  // background-color: #444;
 }
 
 .content {
@@ -134,7 +133,7 @@
 }
 
 .demo-item {
-  background-color: #222;
+  background-color: #1d133b;
   color: #ffffff;
   padding: 15px;
   border-radius: 8px;
@@ -172,4 +171,26 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+}
+pre {
+   /* Match dark curl command background */
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+.card {
+  background-color: #20112f !important; /* Dark gray card background */
+  border: none;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.card-text {
+  font-size: 14px;
+  color: #B5B5B5;
 }
